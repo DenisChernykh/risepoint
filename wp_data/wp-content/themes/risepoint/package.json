@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "dependencies": {
+    "vite": "^7.0.2"
+  }
+}

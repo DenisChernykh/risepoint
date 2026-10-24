@@ -1,0 +1,130 @@
+/*header__catalog style start*/
+.header__sub-menu {
+}
+
+.sub-menu {
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0%;
+  max-width: 1310px;
+  padding: 20px 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .sub-menu {
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px 15px 15px 15px;
+    transition: all 0.3s ease 0s;
+    z-index: 11;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.sub-menu._sub-menu-open,
+.menu-item-has-children.open .sub-menu {
+  opacity: 1;
+  pointer-events: all;
+  
+}
+
+@media (max-width: 991px) {
+  .sub-menu._sub-menu-open {
+    position: fixed;
+    left: 0%;
+  }
+  .menu-item-has-children.open .sub-menu {
+    position: fixed;
+    left: 0%;
+  }
+}
+
+.sub-menu__button-back {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .sub-menu__button-back {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: var(--main-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+}
+
+.sub-menu__list {
+  background: var(--main-color);
+  padding: 22px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+  .sub-menu__list {
+    overflow: auto;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+}
+
+.sub-menu__item {
+}
+
+.sub-menu__link {
+  display: block;
+  padding: 10px 0px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  line-height: 120%;
+}
+
+@media (max-width: 991px) {
+  .sub-menu__link {
+    font-size: 20px;
+  }
+}
+
+.sub-menu__link:hover {
+  color: #eadebd;
+}
+
+.current-menu-item .menu__link {
+  color: var(--main-color-active);
+}
+
+@media (min-width: 992px) {
+  .menu-item-has-children.open .sub-menu {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+		width: 80%;
+  }
+}
